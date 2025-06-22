@@ -51,7 +51,7 @@ set log_ice_slv   = 1  # sea level control
 set log_ice_ant   = 1
 
 # directories
-set WDIR=/Users/zxie0012/Documents/GREB-ISM
+set WDIR=/home/arindam/GREB-ISM
 set JDIR=$WDIR/job-script
 set MDIR=$WDIR/src
 set IDIR=$WDIR/input/
@@ -178,8 +178,6 @@ time_flux   = $TIME_QFLX
 time_ctrl   = $TIME_CTRL
 time_scnr   = $TDIM_RUN
 log_restart = $RESTART
-dt_rstrt    = $DT_RSTRT
-dt_out      = $DT_OUT
 /
 &PHYSICS
  log_exp    = $EXP      ! complete GREB model; 2xCO2 forcing
@@ -369,8 +367,6 @@ time_flux   = $TIME_QFLX
 time_ctrl   = $TIME_CTRL
 time_scnr   = $TDIM_RUN
 log_restart = $RESTART
-dt_rstrt    = $DT_RSTRT
-dt_out      = $DT_OUT
 /
 &PHYSICS
  log_exp    = $EXP      ! complete GREB model; 2xCO2 forcing
