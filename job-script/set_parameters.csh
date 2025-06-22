@@ -41,4 +41,4 @@ set log_ice_ant   = 1
 
 
 # directories
-set WDIR=/Users/zxie0012/Documents/GREB-ISM
+set WDIR=/home/arindam/GREB-ISM
