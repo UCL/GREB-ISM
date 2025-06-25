@@ -106,7 +106,7 @@ print(output_table)
 # Save the markdown table to a file
 MARKDOWN_FILE = "ctl_summary.md"
 with open(MARKDOWN_FILE, "w", encoding="utf-8") as f:
-    f.write("# CTL Summary\n\n")
+    f.write("# Input Summary\n\n")
     f.write(input_table)
-    f.write("\n\n# Benchmark CTL Summary\n\n")
+    f.write("\n\n# Output Summary\n\n")
     f.write(output_table)

@@ -1,4 +1,4 @@
-# CTL Summary
+# Input Summary
 
 | File                                       | Title                                                                                                      |   XDEF |   YDEF |   ZDEF |   TDEF |   VAR Count | Variables   | Data File                                  |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------|--------|--------|--------|--------|-------------|-------------|--------------------------------------------|
@@ -20,7 +20,7 @@
 | solar_radiation.clim.ctl                   | current day solar radiation (Sellers 1965)                                                                 |      1 |     48 |      1 |    730 |           1 | solar       | solar_radiation.clim.bin                   |
 | erainterim.windspeed.850hpa.clim.ctl       | 850 hPa wind speed from ERA interim (Dee et al., 2011)                                                     |     96 |     48 |      1 |    730 |           1 | swind       | erainterim.windspeed.850hpa.clim.bin       |
 
-# Benchmark CTL Summary
+# Output Summary
 
 | File                                                   | Title   |   XDEF |   YDEF |   ZDEF |   TDEF |   VAR Count | Variables                                                                                         | Data File                                              |
 |--------------------------------------------------------|---------|--------|--------|--------|--------|-------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------|
