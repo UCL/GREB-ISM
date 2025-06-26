@@ -16,6 +16,7 @@ def parse_ctl_summary(filepath):
         "tdef": 0,
         "var_count": 0,
         "variables": [],
+        "variables_description": [],
         "data file": "",
     }
 
@@ -46,9 +47,12 @@ def parse_ctl_summary(filepath):
             continue
         elif in_vars_block:
             parts = line.split()
-            if len(parts) >= 3:
+            if len(parts) >= 4:
                 var_name = parts[0]
+                var_description = " ".join(parts[3:])
                 metadata["variables"].append(var_name)
+                metadata["variables_description"].append(var_description)
+
         elif line.lower().startswith("dset"):
             parts = line.split()
             if len(parts) > 1:
@@ -75,8 +79,15 @@ def summarize_all_ctl_files(folder):
                     meta["zdef"],
                     meta["tdef"],
                     meta["var_count"],
-                    ", ".join(meta["variables"][:50])
-                    + ("..." if meta["var_count"] > 50 else ""),
+                    ", ".join(
+                        [
+                            f"{var} ({desc})"
+                            for var, desc in zip(
+                                meta["variables"],
+                                meta["variables_description"],
+                            )
+                        ]
+                    ),
                     meta["data file"],
                 ]
             )
