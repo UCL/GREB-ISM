@@ -7,6 +7,8 @@ from warnings import warn
 
 from tabulate import tabulate
 
+from utility.metadata import Metadata
+
 
 @dataclass
 class File:
@@ -58,7 +60,7 @@ class File:
 class CTLFile(File):
     """A class to represent a CTL file with additional metadata parsing."""
 
-    metadata: dict = field(default_factory=dict, init=False)
+    metadata: Metadata = field(init=False)
 
     def __post_init__(self):
         """Initialize the CTL file object and parse metadata."""
@@ -67,64 +69,7 @@ class CTLFile(File):
         if self.extension.lower() != "ctl":
             raise ValueError(f"Expected a .ctl file, but got: {self.extension}")
 
-        self.metadata = self.parse_ctl_summary()
-
-    def parse_ctl_summary(self) -> dict:
-        """Parse a .ctl file and extract metadata for summary."""
-
-        metadata = {
-            "file": os.path.basename(self.path),
-            "title": "",
-            "xdef": 0,
-            "ydef": 0,
-            "zdef": 0,
-            "tdef": 0,
-            "var_count": 0,
-            "variables": [],
-            "variables_description": [],
-            "data file": "",
-        }
-
-        with open(self.path, "r", encoding="utf-8") as file:
-            lines = file.readlines()
-
-        in_vars_block = False
-        for line_number, line in enumerate(lines):
-            line = line.strip()
-
-            metadata["S.No."] = line_number + 1
-
-            if line.lower().startswith("title"):
-                metadata["title"] = line.split(None, 1)[1]
-            elif line.lower().startswith("xdef"):
-                metadata["xdef"] = int(line.split()[1])
-            elif line.lower().startswith("ydef"):
-                metadata["ydef"] = int(line.split()[1])
-            elif line.lower().startswith("zdef"):
-                metadata["zdef"] = int(line.split()[1])
-            elif line.lower().startswith("tdef"):
-                metadata["tdef"] = int(line.split()[1])
-            elif line.lower().startswith("vars"):
-                in_vars_block = True
-                continue
-            elif line.lower().startswith("endvars"):
-                in_vars_block = False
-                continue
-            elif in_vars_block:
-                parts = line.split()
-                if len(parts) >= 4:
-                    var_name = parts[0]
-                    var_description = " ".join(parts[3:])
-                    metadata["variables"].append(var_name)
-                    metadata["variables_description"].append(var_description)
-
-            elif line.lower().startswith("dset"):
-                parts = line.split()
-                if len(parts) > 1:
-                    metadata["data file"] = parts[1][1:]  # Remove leading '^'
-
-        metadata["var_count"] = len(metadata["variables"])
-        return metadata
+        self.metadata = Metadata(file_path=self.path)
 
 
 def summarize_all_ctl_files(folder):
@@ -136,27 +81,25 @@ def summarize_all_ctl_files(folder):
 
             ff = CTLFile(os.path.join(folder, file))
             meta = ff.metadata
-            # path = os.path.join(folder, file)
-            # meta = parse_ctl_summary(path)
             rows.append(
                 [
-                    meta["file"],
-                    meta["title"],
-                    meta["xdef"],
-                    meta["ydef"],
-                    meta["zdef"],
-                    meta["tdef"],
-                    meta["var_count"],
+                    meta.file,
+                    meta.title,
+                    meta.xdef,
+                    meta.ydef,
+                    meta.zdef,
+                    meta.tdef,
+                    meta.var_count,
                     ", ".join(
                         [
                             f"{var} ({desc})"
                             for var, desc in zip(
-                                meta["variables"],
-                                meta["variables_description"],
+                                meta.variables,
+                                meta.variables_description,
                             )
                         ]
                     ),
-                    meta["data file"],
+                    meta.data_file,
                 ]
             )
     headers = [
