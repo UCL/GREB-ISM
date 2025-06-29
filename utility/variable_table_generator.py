@@ -19,7 +19,7 @@ def summarize_all_ctl_files(folder):
             meta = ff.metadata
             rows.append(
                 [
-                    meta.file,
+                    # meta.file,
                     meta.title,
                     meta.xdef,
                     meta.ydef,
@@ -39,7 +39,7 @@ def summarize_all_ctl_files(folder):
                 ]
             )
     headers = [
-        "File",
+        # "File",
         "Title",
         "XDEF",
         "YDEF",
@@ -64,9 +64,9 @@ def main():
     # Save the markdown table to a file
     output_file = "ctl_summary.rst"
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write("# Input Summary\n\n")
+        f.write("Input Summary\n-------------\n\n")
         f.write(input_table)
-        f.write("\n\n# Output Summary\n\n")
+        f.write("\n\nOutput Summary\n-------------\n\n")
         f.write(output_table)
 
 
