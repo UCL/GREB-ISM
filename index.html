@@ -36,8 +36,260 @@
 <p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
 documentation for details.</p>
+<section id="input-summary">
+<h2>Input Summary<a class="headerlink" href="#input-summary" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Title</p></th>
+<th class="head"><p>XDEF</p></th>
+<th class="head"><p>YDEF</p></th>
+<th class="head"><p>ZDEF</p></th>
+<th class="head"><p>TDEF</p></th>
+<th class="head"><p>VAR Count</p></th>
+<th class="head"><p>Variables</p></th>
+<th class="head"><p>Data File</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>850 hPa air zonal wind from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>uwind (zonal wind [m/s])</p></td>
+<td><p>erainterim.zonal_wind.850hpa.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>surface temperature in Last Glacial Maximum from CMIP6.PMIP.AWI.AWI-ESM-1-1-LR datasets (Shi et al., 2020)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>tsurf (surface temperature [kg/m2/s])</p></td>
+<td><p>ts.AWI-ESM_LGM.730clim.gad</p></td>
+</tr>
+<tr class="row-even"><td><p>air vertical wind standard deviation from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>omegastd (vertical wind standard deviation [Pa2/s2])</p></td>
+<td><p>erainterim.omega_std.vertmean.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>cloud climatology from the ISCCP project (Rossow and Schiffer, 1991)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>cloud (cloud cover)</p></td>
+<td><p>isccp.cloud_cover.clim.bin</p></td>
+</tr>
+<tr class="row-even"><td><p>ocean mixed layer depth climatology from Lorbacher et al. (2006)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>mld (mixed layer depth [m])</p></td>
+<td><p>woce.ocean_mixed_layer_depth.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>surface topography</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>topo (surface topography altitude [m])</p></td>
+<td><p>global.topography.t31.gad</p></td>
+</tr>
+<tr class="row-even"><td><p>bed rock data derived from Bedmachine dataset</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>bed (bed rock altitude [m])</p></td>
+<td><p>bedmachine.bed.rock.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>soil moisture from NCEP dataset (Kalnay et al., 1996)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>moist (soil moisture [%])</p></td>
+<td><p>ncep.soil_moisture.clim.bin</p></td>
+</tr>
+<tr class="row-even"><td><p>precipitation in Last Glacial Maximum from CMIP6.PMIP.AWI.AWI-ESM-1-1-LR datasets (Shi et al., 2020)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>precip (precipitation [kg/m2/s])</p></td>
+<td><p>precip.AWI-ESM_LGM.730clim.gad</p></td>
+</tr>
+<tr class="row-odd"><td><p>ice thickness initial condition regenerated based on Bedmachine dataset</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>iceh (ice thickness [m])</p></td>
+<td><p>ice.height.first-guess.clim730.bin</p></td>
+</tr>
+<tr class="row-even"><td><p>surface temperature data from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>tsurf (surface temperature [K])</p></td>
+<td><p>erainterim.tsurf.1979-2015.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>current day precipitation from GPCP and NCEP-DOE (Antarctica only)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>precip (precipitation [mm/dy])</p></td>
+<td><p>precip.NCEP-DOE.730clim.gad</p></td>
+</tr>
+<tr class="row-even"><td><p>air humidity from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>q (air humidity [kg/kg])</p></td>
+<td><p>erainterim.atmospheric_humidity.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>air vertical wind from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>omega (vertical wind [Pa/s])</p></td>
+<td><p>erainterim.omega.vertmean.clim.bin</p></td>
+</tr>
+<tr class="row-even"><td><p>850 hPa air meridional wind from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>vwind (meridional wind [m/s])</p></td>
+<td><p>erainterim.meridional_wind.850hpa.clim.bin</p></td>
+</tr>
+<tr class="row-odd"><td><p>current day solar radiation (Sellers 1965)</p></td>
+<td><p>1</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>solar (solar radiation [W/m2])</p></td>
+<td><p>solar_radiation.clim.bin</p></td>
+</tr>
+<tr class="row-even"><td><p>850 hPa wind speed from ERA interim (Dee et al., 2011)</p></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>1</p></td>
+<td><p>730</p></td>
+<td><p>1</p></td>
+<td><p>swind (wind speed [m/s])</p></td>
+<td><p>erainterim.windspeed.850hpa.clim.bin</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="output-summary">
+<h2>Output Summary<a class="headerlink" href="#output-summary" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Title</p></th>
+<th class="head"><p>XDEF</p></th>
+<th class="head"><p>YDEF</p></th>
+<th class="head"><p>ZDEF</p></th>
+<th class="head"><p>TDEF</p></th>
+<th class="head"><p>VAR Count</p></th>
+<th class="head"><p>Variables</p></th>
+<th class="head"><p>Data File</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>4</p></td>
+<td><p>12000</p></td>
+<td><p>16</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), mask (land-sea mask), precip (precipitation), albd (surface albedo), glcier (ice surface temperature), iceh (ice thickness), zs (ice surface height), mass (mass balance), adv (advection term), calv (calving), vx (ice flow zonal velocity), vy (ice flow meridianal velocity), tice (ice temperature in different layers)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.00001.scenario.bin</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>12000</p></td>
+<td><p>7</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), albd (albdo), precip (precipitation), slv (sea level)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.00000.scenario.gmean.bin</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>4</p></td>
+<td><p>12000</p></td>
+<td><p>16</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), mask (land-sea mask), precip (precipitation), albd (surface albedo), glcier (ice surface temperature), iceh (ice thickness), zs (ice surface height), mass (mass balance), adv (advection term), calv (calving), vx (ice flow zonal velocity), vy (ice flow meridianal velocity), tice (ice temperature in different layers)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.00000.scenario.bin</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>4</p></td>
+<td><p>36</p></td>
+<td><p>16</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), mask (land-sea mask), precip (precipitation), albd (surface albedo), glcier (ice surface temperature), iceh (ice thickness), zs (ice surface height), mass (mass balance), adv (advection term), calv (calving), vx (ice flow zonal velocity), vy (ice flow meridianal velocity), tice (ice temperature in different layers)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.00000.control.bin</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>96</p></td>
+<td><p>48</p></td>
+<td><p>4</p></td>
+<td><p>12000</p></td>
+<td><p>16</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), mask (land-sea mask), precip (precipitation), albd (surface albedo), glcier (ice surface temperature), iceh (ice thickness), zs (ice surface height), mass (mass balance), adv (advection term), calv (calving), vx (ice flow zonal velocity), vy (ice flow meridianal velocity), tice (ice temperature in different layers)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.0%y4.scenario.bin</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>12000</p></td>
+<td><p>7</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), albd (albdo), precip (precipitation), slv (sea level)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.00001.scenario.gmean.bin</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>12000</p></td>
+<td><p>7</p></td>
+<td><p>tsurf (surface temperature), tatmos (atmosphere temperature), tocean (ocean temperature), vapor (water vapor), albd (albdo), precip (precipitation), slv (sea level)</p></td>
+<td><p>greb.exp-310.benchmark_pictrl.0%y4.scenario.gmean.bin</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
