@@ -1,6 +1,11 @@
 # GREB-ISM
 Code for Globally Resolved Energy Balance - Ice Sheet Model (GREB-ISM)
 
+
+## Original Code
+
+This is a 'fork' of [a previous work](https://github.com/YMI33/GREB-ISM).
+
 ## Prerequirment
 * Fortran (gfortran)
 
