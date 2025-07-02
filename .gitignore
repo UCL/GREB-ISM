@@ -5,5 +5,7 @@ _build/
 _static/
 _templates/
 
+*.png
+
 # Ignore Python cache files
 __pycache__/
