@@ -6,7 +6,7 @@ while (time <= 730)
 "c";
 "set t "time;
 "d q";
-"printim test_"time".png";
+"printim ../../plots/test_"time".png";
 time = time + 1
 endwhile
 
