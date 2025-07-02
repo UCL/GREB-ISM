@@ -1,8 +1,10 @@
+START_TIME = 1
+END_TIME = 730
 "open ../../input/erainterim.atmospheric_humidity.clim.ctl";
 
-time = 1
+time = START_TIME
 
-while (time <= 730)
+while (time <= END_TIME)
 "c";
 "set t "time;
 "d q";
